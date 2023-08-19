@@ -21,6 +21,7 @@ function App() {
   }
 
   useEffect(() => {
+    
     const timer = setTimeout(() => {
       setShowHiddenContent(true);
       setMarginTop('0%');
