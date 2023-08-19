@@ -1,93 +1,108 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Noto sans KR";
-    letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto sans KR';
+  letter-spacing: -0.5px;
 }
 .container {
-    width: 350px;
-    margin: 0 auto;
-    margin-top: 50px;
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 .container .percent {
-    border: 1px solid #ddd;
-    padding: 3rem;
-    margin-bottom: 30px;
+  border: 1px solid #ddd;
+  padding: 3rem;
+  margin-bottom: 30px;
 }
 .container span.bar {
-    display: block;
-    position: relative;
-    height: 15px;
-    margin-bottom: 30px;
-    background: #70CE90;
+  display: block;
+  position: relative;
+  height: 15px;
+  margin-bottom: 30px;
+  background: #70ce90;
 }
 .container span.progress {
-    display: block;
-    width: 0px;
-    height: 100%;
-    background: #70CE90;
-    position: absolute;
-    border-radius: 1rem 0 0 1rem;
-    padding-left: 0;
+  display: block;
+  width: 0px;
+  height: 100%;
+  background: #70ce90;
+  position: absolute;
+  border-radius: 1rem 0 0 1rem;
+  padding-left: 0;
 }
 .container .num {
-    display: block;
-    position: relative;
-    padding-top: 2rem;
-    font-weight: 300;
+  display: block;
+  position: relative;
+  padding-top: 2rem;
+  font-weight: 300;
 }
 .container .num * {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    background: #f7f9f7;
-    border-radius: 5px;
-    margin-top: 10px;
-    padding: 3px;
-    font-size: 14px;
-    cursor: pointer;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #f7f9f7;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 3px;
+  font-size: 14px;
+  cursor: pointer;
 }
 .container .num *:hover {
-    background: #549B6C;
+  background: #549b6c;
 }
 .container .num .percent0 {
-    left: 0%;
+  left: 0%;
 }
 .container .num .percent1 {
-    left: 25%;
+  left: 25%;
 }
 .container .num .percent2 {
-    left: 50%;
+  left: 50%;
 }
 .container .num .percent3 {
-    left: 75%;
+  left: 75%;
 }
 .container .num .percent4 {
-    left: 100%;
+  left: 100%;
 }
 .container .circles * {
-    position: absolute;
-    top: -5px;
-    width: 25px;
-    height: 25px;
-    background: #5e9e73;
-    border-radius: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+  background: #5e9e73;
+  border-radius: 50%;
+  transform: translateX(-50%);
 }
 .container .circles *.on {
-    background: #005225;
+  background: #005225;
 }
 .container .circles span:nth-child(1) {
-    left: 0%;
+  left: 0%;
 }
 .container .circles span:nth-child(2) {
-    left: 25%;
+  left: 25%;
 }
 .container .circles span:nth-child(3) {
-    left: 50%;
+  left: 50%;
 }
 .container .circles span:nth-child(4) {
-    left: 75%;
+  left: 75%;
 }
 .container .circles span:nth-child(5) {
-    left: 100%;
+  left: 100%;
+}
+
+/* 애니메이션 */
+
+@keyframes moveBus {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bus {
+  animation: moveBus 2s linear forwards;
 }

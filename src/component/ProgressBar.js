@@ -58,8 +58,11 @@ function ProgressBar() {
   return (
     <div className="container">
       <div className="percent">
-        <h1 ref={h1}>
-          0분 뒤 <br></br>버스가 도착합니다.
+        <h1 ref={h1} style={{ fontSize: '24px' }}>
+          {' '}
+          {/* 원하는 크기로 변경 */}
+          0분 뒤 <br />
+          버스가 도착합니다.
         </h1>
       </div>
       <div>
