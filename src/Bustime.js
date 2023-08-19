@@ -7,11 +7,7 @@ function BusInfo() {
   const navigate = useNavigate();
 
   function handleClick(e) {
-    navigate('/', {
-      state: {
-        time : `3`
-      },
-    });
+    navigate('/main2');
   }
 
   return (
@@ -26,7 +22,7 @@ function BusInfo() {
       </button>
       <br/>
       <br/>
-      <button className="button" onClick={() => navigate("/")}>
+      <button className="button" onClick={() => navigate("/main2")}>
         7211번 버스: 현재 위치 - 강남역, 다음 정류장 - 양재역{' '}
         <span className="time">(3분전)</span>
       </button>
