@@ -24,7 +24,7 @@ function Header() {
   return (
     <header style={btnStyle}>
       <h1 style={h1Style}>
-        <a>왔데이</a>
+        <a>왔 데 이</a>
       </h1>
     </header>
   );
