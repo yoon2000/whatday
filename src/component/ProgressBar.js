@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import Percent from './Percent';
 import Circle from './Circle';
 import './style.css';
@@ -10,6 +11,10 @@ function ProgressBar() {
   const [cir, setCir] = useState(null);
   let h1 = useRef(null);
   const [num, setNum] = useState(null);
+  const [minute, setMinute] = useState(0);
+  const location = useLocation();
+  const userInfo = { ...location.state };
+  console.log(userInfo.time)
 
   useEffect(() => {
     const conWidth = box.current.getBoundingClientRect().width;
@@ -61,7 +66,7 @@ function ProgressBar() {
         <h1 ref={h1} style={{ fontSize: '24px' }}>
           {' '}
           {/* 원하는 크기로 변경 */}
-          0분 뒤 <br />
+          {minute}분 뒤 <br />
           버스가 도착합니다.
         </h1>
       </div>

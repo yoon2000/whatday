@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Page1 from './Main';
 import Page2 from './Map';
+import BusTime from "./Bustime"
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route index path="/" element={<Page1 />} />
           <Route path="/page2" element={<Page2 />} />
+          <Route path="/detail" element={<BusTime />} />
         </Routes>
       </Router>
     </div>

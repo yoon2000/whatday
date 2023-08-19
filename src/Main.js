@@ -6,11 +6,15 @@ import Map from './Map';
 import './App.css';
 import busImage from './image/bus.png';
 import stopImage from './image/stop.png';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   const [showHiddenContent, setShowHiddenContent] = useState(false);
   const [marginTop, setMarginTop] = useState('23.5%');
   const [showMap, setShowMap] = useState(false);
+  const location = useLocation();
+  const userInfo = { ...location.state };
+  console.log(userInfo.time);
 
   function handleClick() {
     setShowMap(true);
