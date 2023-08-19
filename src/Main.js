@@ -1,12 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import ProgressBar from './component/ProgressBar';
+import './component/style.css';
+import './App.css';
+import ChromeDinoGame from 'react-chrome-dino';
 
-function Page1() {
+const btnStyle = {
+  color: 'white',
+  background: 'green',
+  padding: 15,
+  //".375rem .75rem",
+  border: '1px solid teal',
+  borderRadius: '.25rem',
+  fontSize: '1rem',
+
+  lineHeight: 1.5,
+};
+
+const h1Style = {
+  textAlign: 'center',
+};
+
+function Header() {
+  return (
+    <header style={btnStyle}>
+      <h1 style={h1Style}>
+        <a>왔데이</a>
+      </h1>
+    </header>
+  );
+}
+
+function App() {
   return (
     <div>
-      <h1>페이지2</h1>
-      <p>이것은 페이지2의 내용입니다.</p>
+      <Header></Header>
+      <br></br>
+      <br></br>
+      <h2>
+        <a>정류장 선택</a>
+      </h2>
+      <br></br>
+      <img src="./img/busstop.png"></img>
+      <ProgressBar></ProgressBar>
+      <br></br>
+      <br></br>
+      <div class="dino">
+        <ChromeDinoGame />
+      </div>
     </div>
   );
 }
 
-export default Page1;
+export default App;
